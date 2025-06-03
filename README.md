@@ -7,18 +7,18 @@
 ## Description
 
 
-> This small application offers a fully-functional CFG (Context-Free Grammar) Engine, which I found very helpful for better understanding of Formal Languages and Automata Theory.
-> - <b>Programming language:</b> C++ 20
-> - <b>Concepts:</b> OOP, FLA Theory, Data Structures
-> - <b>How to run?</b>
->  - There is required a compiler which supports C++ 20 (ex: GCC via MinGW)
->  - Clone the repository and open the project in CLion or your preferred IDE
->  - Ensure that the CMakeLists.txt is configured as in this repository
->  - Build and run! Feel free to explore and modify the main source!
+This small application offers a fully-functional CFG (Context-Free Grammar) Engine, which I found very helpful for better understanding of Formal Languages and Automata Theory.
+- <b>Programming language:</b> C++ 20
+- <b>Concepts:</b> OOP, FLA Theory, Data Structures
+- <b>How to run?</b>
+  - There is required a compiler which supports C++ 20 (ex: GCC via MinGW)
+  - Clone the repository and open the project in CLion or your preferred IDE
+  - Ensure that the CMakeLists.txt is configured as in this repository
+  - Build and run! Feel free to explore and modify the main source!
 
 ## Features
 
-Each defined CFG object well-defined functionalities:
+Each defined CFG object has well-defined functionalities:
 
 > ##### Programatic defitinion:
 > ```
@@ -42,7 +42,7 @@ Each defined CFG object well-defined functionalities:
 > Start symbol: S
 >  ```
 
-> #### Definition validator
+> ##### Definition validator
 
 > ##### Compatible string generator 
 
