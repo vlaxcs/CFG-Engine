@@ -20,17 +20,16 @@ This small application offers a fully-functional CFG (Context-Free Grammar) Engi
 
 Each defined CFG object has well-defined functionalities:
 
-> ##### Programatic defitinion:
+- #### Programatic defitinion:
 > ```
 > CFG = (V, Σ, R, S)
 > - V - Non-terminals
-> - Σ - Terminals:
+> - Σ - Terminals
 > - R - Production rules
 > - S - Start symbol: S
 > ```
 
-> ##### Definition visualizer
-> - Preview
+- #### Definition visualizer [Preview]
 > ```
 > Non-terminal: {C, D, S}
 > Terminals: {a, b, c}
@@ -42,17 +41,16 @@ Each defined CFG object has well-defined functionalities:
 > Start symbol: S
 >  ```
 
-> ##### Definition validator
+- #### Definition validator
 
-> ##### Compatible string generator 
+- #### Compatible string generator 
 
-> ##### String derivation visualizer
-> - Preview
-> ```
-> S -> aSb -> aaSbb -> aaεbb -> aabb
-> ```
+- #### String derivation visualizer [Preview]
+```
+S -> aSb -> aaSbb -> aaεbb -> aabb
+```
 
-> ##### Compatible string recognizer
+- #### Compatible string recognizer
 
 ## Implementation
 
