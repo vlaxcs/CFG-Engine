@@ -2,7 +2,7 @@
 
 #include "CFG.h"
 
-#include "types/cfg_types.h"
+#include "types/CFGTypes.h"
 #include <string>
 #include <optional>
 #include <memory>
