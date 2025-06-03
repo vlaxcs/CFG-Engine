@@ -11,6 +11,27 @@
     return this->start_symbol;
 }
 
+bool CFG::validateConfiguration() const {
+    if (!non_terminal.contains(start_symbol)) {
+        return false;
+    }
+
+    for (const auto& [from, tos] : productions) {
+        if (!non_terminal.contains(from)) {
+            return false;
+        }
+
+        for (const auto& to : tos) {
+            if (!non_terminal.contains(to) && !terminal.contains(to) && to != "\0") {
+                return false;
+            }
+        }
+    }
+
+    return true;
+};
+
+
 std::string CFG::generate_recursive(const std::string& current, const int depth, const int max_depth, std::mt19937& rng) {
     // If current string is a terminal, the recursion stops
     if (terminal.contains(current)) {

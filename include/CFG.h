@@ -57,6 +57,9 @@ public:
         return os;
     }
 
+    // Configuration validator
+    [[nodiscard]] bool validateConfiguration() const;
+
     // Tests if a string belongs to referenced CFG
     [[nodiscard]] bool testMembership(const std::string& input) const;
 

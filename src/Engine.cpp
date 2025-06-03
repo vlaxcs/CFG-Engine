@@ -35,8 +35,11 @@ void Engine::createCFG(const std::optional<CFGTypes>& type, const std::optional<
         productions.insert({"S", {"a", "S", "b"}});
         productions.insert({"S", {}}); // Include Epsilon
 
-        const CFG temp(variables, terminals, productions, start_symbol);
-        setCurrentCFG(temp);
+        if (const CFG temp(variables, terminals, productions, start_symbol); temp.validateConfiguration()) {
+            setCurrentCFG(temp);
+        } else {
+            std::cerr << "Configuration is invalid!" << std::endl << temp << std::endl;
+        }
     } else if (type.has_value() && type.value() == CFGTypes::DefaultNonCFG) {
         std::set<std::string> variables;
         std::set<std::string> terminals;
@@ -61,10 +64,17 @@ void Engine::createCFG(const std::optional<CFGTypes>& type, const std::optional<
         productions.insert({"S", {"\0"}}); // Include Epsilon
         productions.insert({"D", {"\0"}}); // Include Epsilon
 
-        const CFG temp(variables, terminals, productions, start_symbol);
-        setCurrentCFG(temp);
+        if (const CFG temp(variables, terminals, productions, start_symbol); temp.validateConfiguration()) {
+            setCurrentCFG(temp);
+        } else {
+            std::cerr << "Configuration is invalid!" << std::endl << temp << std::endl;
+        }
     } else if (new_cfg.has_value()) {
-        setCurrentCFG(new_cfg.value());
+        if (new_cfg.value().validateConfiguration()) {
+            setCurrentCFG(new_cfg.value());
+        } else {
+            std::cerr << "Configuration is invalid!" << std::endl << new_cfg.value() << std::endl;
+        }
     }
 }
 
