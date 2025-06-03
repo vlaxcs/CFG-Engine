@@ -7,7 +7,7 @@
 ## Description
 
 
-This small application offers a fully-functional CFG (Context-Free Grammar) Engine, which I found very helpful for better understanding of Formal Languages and Automata Theory.
+This small application offers a fully-functional <b>CFG (Context-Free Grammar) Engine</b>, which I found very helpful for better understanding of Formal Languages and Automata Theory.
 - <b>Programming language:</b> C++ 20
 - <b>Concepts:</b> OOP, FLA Theory, Data Structures
 - <b>How to run?</b>
