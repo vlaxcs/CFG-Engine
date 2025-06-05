@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.30)
-project(CFG_Parser)
+project(CFG-Engine)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(CFG_Parser main.cpp
+add_executable(CFG-Engine main.cpp
         src/Engine.cpp
         src/CFG.cpp)
 
-target_include_directories(CFG_Parser PUBLIC include)
+target_include_directories(CFG-Engine PUBLIC include)
